@@ -1,0 +1,37 @@
+{% extends "ewaste/base.html" %}
+{% block content%}
+
+<div class="row pb-5">
+</div>
+<div>
+  <div class="col-md-12 px-4">
+    <div class="row">
+      
+      {% for desktops in desktops %}
+      <div class="col-md-3 pb-5">
+        <div class="card">
+          <div class="back-img" style="background-image: url({{desktops.image.url}});">
+            <img class="rounded-circle account-img img1" src="{{ desktops.author.profile.image.url }}" alt="">
+          </div>
+
+
+          <div class="card-body">
+            <span class="card-user">{{desktops.name}}</span>
+            <p class="card-text">{{desktops.description}}
+            </p>
+            <div class="pb-2 text-sec">Price: <a href="#" class="card-text">{{desktops.price}}</a></div>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+
+          </div>
+        </div>
+      </div>
+
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock content %}

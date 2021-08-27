@@ -1,0 +1,41 @@
+{% extends "ewaste/base.html" %}
+{% block content%}
+
+<div class="pt-2">
+  <a class="btn btn-outline-secondary" type="submit" href="{% url 'laptops-create' %}"> Sell Here</a>
+</div>
+
+<div class="row pb-5">
+</div>
+<div>
+  <div class="col-md-12 px-4">
+    <div class="row">
+      
+      {% for laptops in laptops %}
+      <div class="col-md-3 pb-5">
+        <div class="card">
+          <div class="back-img" style="background-image: url({{laptops.image.url}});">
+            <img class="rounded-circle account-img img1" src="{{ laptops.author.profile.image.url }}" alt="">
+          </div>
+
+
+          <div class="card-body">
+            <div class="card-user pb-2">{{laptops.name}}</div>
+            <p class="card-text">{{laptops.description}}
+            </p>
+            <div class="pb-2 text-sec">Price: <a href="#" class="card-text">{{laptops.price}}</a></div>
+            <a href="{% url 'laptops-detail' laptops.id %}" class="btn btn-primary">Buy</a>
+
+          </div>
+        </div>
+      </div>
+
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock content %}

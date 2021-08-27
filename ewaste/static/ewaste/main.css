@@ -1,0 +1,10 @@
+       .content {
+            /* height:150vh;   */
+            background: url(../static/ewaste/unsplash.jpg) no-repeat center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+    

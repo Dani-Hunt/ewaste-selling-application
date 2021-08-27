@@ -1,0 +1,32 @@
+{% extends "ewaste/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <style>
+        .text-muted{
+            color: yellow !important;
+        }
+    </style>
+    <div class="content-section container1">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group color">
+                <legend class="border-bottom mb-4 color1">Join Today</legend>
+                {{ form | crispy }}
+
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-warning" type="submit">Sign Up</button>
+
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already have an account?<a class="btn btn-outline-success" href="{% url 'login'%}">Sign In</a>
+            </small>
+        </div>
+         
+
+    </div>
+
+{% endblock content %}

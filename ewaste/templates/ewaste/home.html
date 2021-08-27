@@ -1,0 +1,68 @@
+{% extends "ewaste/base.html" %}
+{% block content%}
+<div class="row pb-5">
+  <div class="container col-md-3 boz">
+    <p>E-Waste</p>
+    <p>Management</p>
+    <p>Application</p>
+
+  </div>
+</div>
+
+<div class="col-md-12 px-4">
+  <div class="row">
+
+    <div class="col-md-4 pb-5">
+      <div class="card">
+        <div class="back-img" style="background: url(../static/ewaste/laptops.jpg);">
+        </div>
+
+        <div class="card-body">
+          <h1 class="card-title">Laptops</h1>
+          <p class="card-text">View more Laptops
+          </p>
+          <!-- <div class="pb-2 text-sec">Price: <a href="#" class="btn btn-light">{{electronic.price}}</a></div> -->
+          <a href="{% url 'ewaste-laptops' %}" class="btn btn-primary">Show more</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 pb-5">
+      <div class="card">
+        <div class="back-img" style="background: url(../static/ewaste/phones.jpg);">
+        </div>
+
+        <div class="card-body">
+          <h1 class="card-title">Phones</h1>
+          <p class="card-text">View more Phones
+          </p>
+          <!-- <div class="pb-2 text-sec">Price: <a href="#" class="btn btn-light">{{electronic.price}}</a></div> -->
+          <a href="{% url 'ewaste-phones' %}" class="btn btn-primary">Show more</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 pb-5">
+      <div class="card">
+        <div class="back-img" style="background: url(../static/ewaste/other.jpg);">
+        </div>
+
+        <div class="card-body">
+          <h1 class="card-title">Others</h1>
+          <p class="card-text">view more Electronics
+          </p>
+          <!-- <div class="pb-2 text-sec">Price: <a href="#" class="btn btn-light">{{electronic.price}}</a></div> -->
+          <a href="{% url 'ewaste-others' %}" class="btn btn-primary">Show more</a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+{% endblock content %}

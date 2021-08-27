@@ -1,0 +1,53 @@
+{% extends "ewaste/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<style>
+    .text-muted{
+        color: yellow !important;
+        font-size: large;
+    }
+</style>
+
+    <div class="content-section container1">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group color">
+                <legend class="border-bottom mb-4 color1">Log In</legend>
+
+                {{ form | crispy }}
+
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info mt-3" type="submit">Log In</button>
+
+                <span class="text-muted">
+                    <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                </span>
+            </div>
+        </form>
+<div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+         
+
+    </div>
+
+{% endblock content %}

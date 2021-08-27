@@ -1,0 +1,28 @@
+{% extends "ewaste/base.html" %}
+{% block content%}
+
+<div class="box-element">
+    <div class="cart-row">
+        <div style="flex: 2;"></div>
+        <div style="flex: 2;"><strong>Item</strong></div>
+        <div style="flex: 2;"><strong>Price</strong></div>
+        <div style="flex: 2;"><strong>Quantity</strong></div>
+        <div style="flex: 2;"><strong>Total</strong></div>
+    </div>
+{% for item in items %}
+<div class="cart-row">
+    <div style="flex: 2;"><img src="{{item.product.imageURL}}" alt=""></div>
+    <div style="flex: 2;"><p>{{item.product.name}}</p></div>
+    <div style="flex: 1;"><p>{{item.product.price | floatformat:2}}</p></div>
+    <div style="flex: 1;">
+    <p class="quantity">x{{item.quantity}}</p>
+    <div class="quantity">
+      
+    </div>
+    </div>
+    <div style="flex: 1;"><p>$32</p></div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock content %}
