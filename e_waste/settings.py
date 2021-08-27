@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-1i=ikspb_pitq$g@_i507c7d49wxa(n)0sza^_u^84asrb$-c*
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'e-wastemanagement.herokuapp.com',
     '127.0.0.1',
-   'e-wastemanagement.herokuapp.com/'
 ]
 
 
